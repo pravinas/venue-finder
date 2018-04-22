@@ -14,17 +14,59 @@ function all(selector) {
 }
 
 function loadPage() {
-	dom.contactList = one("#contacts");
-	loadContacts();
+	dom.content = one("#content");
+	loadContactsPage();
 }
 
 function newConversation(){
 	window.alert("New Conversation Functionality not yet implemented");
 }
 
-function loadContacts() {
+function loadContactsPage() {
+	var header = document.createElement("div");
+	header.setAttribute("id","header");
+	var headtable = document.createElement("div");
+	headtable.setAttribute("id", "head-table");
+	header.appendChild(headtable);
+	var messagesTitle = document.createElement("div");
+	messagesTitle.setAttribute("class","cell");
+	messagesTitle.setAttribute("style","width:85%;");
+	messagesTitle.appendChild(document.createTextNode("Messages"));
+	headtable.appendChild(messagesTitle);
+	var plusCell = document.createElement("div");
+	plusCell.setAttribute("class","cell");
+	plusCell.setAttribute("style","width:15%;");
+	headtable.appendChild(plusCell);
+	var plusButton = document.createElement("button");
+	plusButton.setAttribute("id","new-conversation");
+	plusButton.setAttribute("onclick","newConversation();")
+	plusButton.appendChild(document.createTextNode("+"));
+	plusCell.appendChild(plusButton);
+
+	dom.contactHeader = header;
+	dom.content.appendChild(header);
+
+	var searchArea = document.createElement("div");
+	searchArea.setAttribute("id","search-area");
+	var searchBar = document.createElement("span");
+	searchBar.setAttribute("id","search-bar");
+	searchArea.appendChild(searchBar);
+	var search = document.createElement("i");
+	search.setAttribute("class", "fas fa-search");
+	searchBar.appendChild(search);
+	var sbinput = document.createElement("input");
+	sbinput.setAttribute("id","search-bar-input");
+	sbinput.setAttribute("placeholder","Try \"Amy Who\"")
+	searchBar.appendChild(sbinput);
+
+	dom.contactSearch = searchArea;
+	dom.content.appendChild(dom.contactSearch);
+
+	dom.contactList = document.createElement("div");
+	dom.contactList.setAttribute("id", "contacts");
+
 	for (var contact in contacts){
-		var divE = document.createElement("div");
+		var divE = document.createElement("button");
 		divE.setAttribute("class","contact");
 
 		var pic = document.createElement("img");
@@ -42,12 +84,25 @@ function loadContacts() {
 
 		var snipp = document.createElement("div");
 		snipp.setAttribute("class","contact-snippet");
-		var convLen = contacts[contact].length;
-		snipp.appendChild(document.createTextNode(contacts[contact][convLen-1][1]))
+		var conversation = contacts[contact];
+		var convLen = conversation.length;
+		var lastLine = conversation[convLen-1];
+		if (lastLine[0]){
+			snipp.appendChild(document.createTextNode(contact+": "+lastLine[1]));
+		}
+		else {
+			snipp.appendChild(document.createTextNode("You: "+lastLine[1]));
+		}
+
 		info.appendChild(snipp);
 
 		divE.appendChild(info);
 
 		dom.contactList.appendChild(divE);
 	}
+	dom.content.appendChild(dom.contactList);
+}
+
+function loadConversation(contactName){
+
 }

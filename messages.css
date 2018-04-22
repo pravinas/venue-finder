@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
 #header {
 	font-size: 36px;
 	outline: none;
@@ -73,9 +75,10 @@ h3 {
 .contact {
 	display:table-row;
 	width:100%;	
-	height:50px;
+	height:auto;
 	border-spacing: 20px;
 	border-bottom: 2px solid #CCC;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .contact-pic {
@@ -93,6 +96,7 @@ h3 {
 
 .contact-info{
 	display:table-cell;
+	text-align: left;
 	margin-left: 10%;
 	float:left;
 	width:60%;
@@ -101,8 +105,8 @@ h3 {
 .contact-name {
 	width:75%;
 	height:40%;
-	font-size:18px;
-	padding:10px;
+	font-size:20px;
+	padding:20px;
 	padding-left: 0px;
 	font-weight: bold;
 }
@@ -111,5 +115,6 @@ h3 {
 	width:75%;
 	height:60%;
 	padding:10px;
+	font-size: 16px;
 	font-weight: lighter;
 }
