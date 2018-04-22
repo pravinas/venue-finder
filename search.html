@@ -3,24 +3,77 @@
 	<head>
 		<title>Search - Venue Finder</title>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="search.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 		<script src="main.js"></script>
 	</head>
 
 	<body>
-		<div id="tabs">
-			<button id="venues-tab-button">Venues</button>
-			<button id="musicians-tab-button">Musicians</button>
-		</div>
-		<div id="search-area">
-			<input placeholder="Try &quot;Cambridge&quot;" />
-			<button id="search-button">Search</button> <br /> <br />
-			<button id="price-filter">Price</button>
-			<button id="music-type-filter">Music Type</button>
-			<button id="size-filter">Size</button>
-			<button id="rating-filter">Rating</button>
-		</div>
-		<div id="results">
-			<h2>Featured Venues Near You</h2>
+		<div id="content">
+			<div id="tabs">
+				<button id="venues-tab-button" class="tab-button" onclick="switchTab('venues');">Venues</button><!--
+				--><button id="musicians-tab-button" class="tab-button" onclick="switchTab('musicians');">Musicians</button>
+			</div>
+			<div id="tab-hider">
+				<span id="venues-hider" class="hider"></span>
+				<span id="musicians-hider" class="hider"></span>
+			</div>
+			<div id="search-area">
+				<span id="search-bar">
+					<i class="fas fa-search"></i>
+					<input id="search-bar-input" placeholder="Try &quot;Cambridge&quot;" />
+				</span>
+				<button id="price-filter" class="filter-button">Price</button>
+				<button id="music-type-filter" class="filter-button">Music Type</button>
+				<button id="size-filter" class="filter-button">Size</button>
+				<button id="rating-filter" class="filter-button">Rating</button>
+			</div>
+			<div id="results">
+				<h2 id="results-header"></h2>
+				<div class="result">
+					<span class="result-image">
+						<i class="far fa-heart"></i>
+					</span>
+					<div class="result-info">
+						<h3>
+							<b>Result Title</b>
+							<span class="rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</span>
+						</h3>
+						<p>Result Description</p>
+					</div>
+				</div>
+				<div class="result">
+					<span class="result-image">
+						<i class="far fa-heart"></i>
+					</span>
+					<div class="result-info">
+						<h3>
+							<b>Result Title</b>
+							<span class="rating">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</span>
+						</h3>
+						<p>Result Description</p>
+					</div>
+				</div>
+			</div>
+
+			<!--<div id="price-filter-popup" class="filter-popup">
+				<h3>Price per Hour</h3>
+
+				<button class="filter-popup-button">Apply</button>
+				<button class="filter-popup-button">Cancel</button>
+			</div>-->
 		</div>
 	</body>
 </html>

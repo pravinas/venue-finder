@@ -1,0 +1,35 @@
+h1 {
+	font-size: 60px;
+}
+
+#content {
+	font-size: 1.2em;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+input {
+	border-radius: 8px;
+	font-size: 24px;
+	outline: none;
+	box-shadow: none;
+	padding: 8px 12px;
+}
+
+button {
+	font-size: 24px;
+	border: 2px solid #e0e0e0;
+	background: #e0e0e0;
+	color: black;
+	padding: 16px 24px;
+	border-radius: 8px;
+}
+
+button:hover {
+	border: 2px solid #ed593e;
+	background: #ed593e;
+	color: white;
+}

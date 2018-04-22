@@ -3,19 +3,28 @@
 	<head>
 		<title>Login - Venue Finder</title>
 		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="login.css">
 		<script src="main.js"></script>
 	</head>
 
 	<body>
-		<center><h1>Venue Finder</h1>
-		<div id="login-signup">
-			<p>Username: <input id="username" /></p>
-			<p>Password: <input id="password" /></p>
-			<button id="login-signup-button" onclick="location.href='search.html';">Login / Sign Up</button>
-			<div id="fb-login">
-				<center><p>or</p></center>
-				<button id="fb-login-button" onclick="location.href='search.html';">Login / Sign Up with Facebook</button>
-			</div>
+		<div id="content">
+			<center>
+				<h1>Venue Finder</h1>
+				<div id="login-signup">
+					<p>Username</p>
+					<input id="username" />
+					<p>Password</p>
+					<input id="password" type="password" />
+					<p>
+						<button id="login-signup-button" onclick="location.href='search.html';">Login / Sign Up</button>
+					</p>
+					<div id="fb-login">
+						<p>or</p>
+						<button id="fb-login-button" onclick="location.href='search.html';">Login / Sign Up with Facebook</button>
+					</div>
+				</div>
+			</center>
 		</div>
 	</body>
 </html>
