@@ -21,8 +21,12 @@
 	color: black;
 }
 
-.favorited {
-	color: red;
+.fa-heart.favorited {
+	color: #ed593e;
+}
+
+.fa-heart {
+	color:white;
 }
 
 .inactive-tab-button {

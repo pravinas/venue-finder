@@ -50,7 +50,6 @@ function loadPage() {
 		else {
 			this.className += " favorited"
 		}
-		console.log(this.className);
 
 	};
 	for (var i=0; i<hearts.length; i++) {
