@@ -21,11 +21,11 @@
 	color: black;
 }
 
-.fa-heart.favorited {
+.result-image .fa-heart.favorited {
 	color: #ed593e;
 }
 
-.fa-heart {
+.result-iamge .fa-heart {
 	color:white;
 }
 
@@ -155,7 +155,7 @@ h3 {
 .popup-overlay {
     display: none;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     top: 0;
     width: 100%;
