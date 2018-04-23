@@ -18,11 +18,19 @@ function loadPage() {
 	loadContactsPage();
 }
 
+function removeAllContent(){
+	while (dom.content.firstChild) {
+		dom.content.removeChild(dom.content.firstChild);
+	}
+}
+
 function newConversation(){
 	window.alert("New Conversation Functionality not yet implemented");
 }
 
 function loadContactsPage() {
+	removeAllContent();
+
 	var header = document.createElement("div");
 	header.setAttribute("id","header");
 	var headtable = document.createElement("div");
@@ -68,6 +76,7 @@ function loadContactsPage() {
 	for (var contact in contacts){
 		var divE = document.createElement("button");
 		divE.setAttribute("class","contact");
+		divE.setAttribute("onclick", "loadConversation(\""+contact+"\");");
 
 		var pic = document.createElement("img");
 		pic.setAttribute("class","contact-pic");
@@ -87,7 +96,7 @@ function loadContactsPage() {
 		var conversation = contacts[contact];
 		var convLen = conversation.length;
 		var lastLine = conversation[convLen-1];
-		if (lastLine[0]){
+		if (!lastLine[0]){
 			snipp.appendChild(document.createTextNode(contact+": "+lastLine[1]));
 		}
 		else {
@@ -104,5 +113,75 @@ function loadContactsPage() {
 }
 
 function loadConversation(contactName){
+	removeAllContent();
 
+	var header = document.createElement("div");
+	header.setAttribute("id","header");
+	var headtable = document.createElement("div");
+	headtable.setAttribute("id", "head-table");
+	header.appendChild(headtable);
+	var plusCell = document.createElement("div");
+	plusCell.setAttribute("class","cell");
+	plusCell.setAttribute("style","width:15%;");
+	headtable.appendChild(plusCell);
+	var messagesTitle = document.createElement("div");
+	messagesTitle.setAttribute("class","cell");
+	messagesTitle.setAttribute("style","width:85%;");
+	messagesTitle.appendChild(document.createTextNode(contactName));
+	headtable.appendChild(messagesTitle);
+	var plusButton = document.createElement("button");
+	plusButton.setAttribute("id","new-conversation");
+	plusButton.setAttribute("onclick","loadContactsPage();")
+	plusButton.appendChild(document.createTextNode("<"));
+	plusCell.appendChild(plusButton);
+
+	dom.messageHeader = header;
+	dom.content.appendChild(header);
+
+	var messageDisplay = document.createElement("div");
+	messageDisplay.setAttribute("id","message-display");
+
+	for (var i = 0; i < contacts[contactName].length; i++) {
+		var message = contacts[contactName][i];
+		var bubble = document.createElement("div");
+		bubble.setAttribute("class","message-bubble "+ (message[0]?"message-bubble-you":"message-bubble-them"));
+		bubble.appendChild(document.createTextNode(message[1]));
+		messageDisplay.appendChild(bubble);
+	}
+	dom.messages = messageDisplay;
+	dom.content.appendChild(messageDisplay);
+
+	var inputArea = document.createElement("div");
+	inputArea.setAttribute("id","input-area");
+	var inputBar = document.createElement("span");
+	inputBar.setAttribute("id","input-bar");
+	inputArea.appendChild(inputBar);
+	var inputDiv = document.createElement("div");
+	inputDiv.setAttribute("class","input-table");
+	inputBar.appendChild(inputDiv);
+	var inputDi = document.createElement("div");
+	inputDi.setAttribute("class","input-table-row");
+	inputDiv.appendChild(inputDi);
+	var input = document.createElement("input");
+	input.setAttribute("id","input");
+	input.setAttribute("placeholder","Type a message.");
+	inputDi.appendChild(input);
+	var buttonDiv = document.createElement("div");
+	buttonDiv.setAttribute("id","button-cell");
+	inputDi.appendChild(buttonDiv);
+	var sendButton = document.createElement("button");
+	sendButton.setAttribute("id", "send-button");
+	sendButton.setAttribute("onclick", "sendMessage(\""+contactName+"\");");
+	sendButton.appendChild(document.createTextNode(">"));
+	buttonDiv.appendChild(sendButton);
+
+	dom.messageInputArea = inputArea;
+	dom.messageInput = input;
+	dom.content.appendChild(dom.messageInputArea);
+}
+
+function sendMessage(contactName){
+	message = dom.messageInput.value;
+	contacts[contactName].push([1, message]);
+	loadConversation(contactName);
 }
