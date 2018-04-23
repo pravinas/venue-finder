@@ -21,6 +21,10 @@
 	color: black;
 }
 
+.favorited {
+	color: red;
+}
+
 .inactive-tab-button {
 	background: #ededed;
 	color: #8b8b8b;

@@ -42,6 +42,22 @@ function loadPage() {
 		}
 	}
 
+	var hearts = document.getElementsByClassName("fa-heart");
+	var toggleFavorite = function() {
+		if (this.classList.contains("favorited")) {
+			this.classList.remove("favorited");
+		}
+		else {
+			this.className += " favorited"
+		}
+		console.log(this.className);
+
+	};
+	for (var i=0; i<hearts.length; i++) {
+		var heart = hearts[i];
+		heart.onclick = toggleFavorite;
+	}
+
 	noUiSlider.create(dom.priceFilterSlider, {
 		start: [40, 100],
 		connect: true,
@@ -118,6 +134,8 @@ function closeFilterPopup() {
 		popup.style.display = "none";
 	}
 }
+
+
 
 function updatePriceRange() {
 	var vals = dom.priceFilterSlider.noUiSlider.get();
