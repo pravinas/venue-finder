@@ -5,7 +5,10 @@
 		<link rel="stylesheet" href="main.css">
 		<link rel="stylesheet" href="search.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+		<link href="nouislider.min.css" rel="stylesheet">
 		<script src="main.js"></script>
+		<script src="search.js"></script>
+		<script src="nouislider.min.js"></script>
 	</head>
 
 	<body>
@@ -68,12 +71,110 @@
 				</div>
 			</div>
 
-			<!--<div id="price-filter-popup" class="filter-popup">
-				<h3>Price per Hour</h3>
+			<div class="popup-overlay">
+				<div id="price-filter-popup" class="filter-popup">
+					<h3 class="popup-header">Price per Hour</h3>
+					<div class="filter-popup-content">
+						<div id="price-range"></div>
+						<div id="price-filter-slider"></div>
+					</div>
+					<div class="filter-popup-buttons">
+						<button class="filter-popup-button left-button">Apply</button><!--
+						--><button class="filter-popup-button right-button">Clear</button>
+					</div>
+				</div>
 
-				<button class="filter-popup-button">Apply</button>
-				<button class="filter-popup-button">Cancel</button>
-			</div>-->
+				<div id="music-type-filter-popup" class="filter-popup">
+					<h3 class="popup-header">Music Type</h3>
+					<div class="filter-popup-content">
+						<div class="checkbox-option">
+							<input type="checkbox" name="jazz" id="jazz-filter"><label for="jazz-filter">Jazz</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="country" id="country-filter"><label for="country-filter">Country</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="folk" id="folk-filter"><label for="folk-filter">Folk</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="pop" id="pop-filter"><label for="pop-filter">Pop</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="rock" id="rock-filter"><label for="rock-filter">Rock</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="alternative" id="alternative-filter"><label for="alternative-filter">Alternative</label>
+						</div>
+					</div>
+					<div class="filter-popup-buttons">
+						<button class="filter-popup-button left-button">Apply</button><!--
+						--><button class="filter-popup-button right-button">Cancel</button>
+					</div>
+				</div>
+
+				<div id="size-filter-popup" class="filter-popup">
+					<h3 class="popup-header">Venue Size</h3>
+					<div class="filter-popup-content">
+						<div id="venue-size-range"></div>
+						<div id="venue-size-filter-slider"></div>
+					</div>
+					<div class="filter-popup-buttons">
+						<button class="filter-popup-button left-button">Apply</button><!--
+						--><button class="filter-popup-button right-button">Clear</button>
+					</div>
+				</div>
+
+				<div id="rating-filter-popup" class="filter-popup">
+					<h3 class="popup-header">Rating</h3>
+					<div class="filter-popup-content">
+						<div class="checkbox-option">
+							<input type="checkbox" name="1-star" id="1-star-filter">
+							<label for="1-star-filter">
+								<i class="fas fa-star"></i>
+							</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="2-star" id="2-star-filter">
+							<label for="2-star-filter">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="3-star" id="3-star-filter">
+							<label for="3-star-filter">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="4-star" id="4-star-filter">
+							<label for="4-star-filter">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</label>
+						</div>
+						<div class="checkbox-option">
+							<input type="checkbox" name="5-star" id="5-star-filter">
+							<label for="5-star-filter">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+							</label>
+						</div>
+					</div>
+					<div class="filter-popup-buttons">
+						<button class="filter-popup-button left-button">Apply</button><!--
+						--><button class="filter-popup-button right-button">Cancel</button>
+					</div>
+				</div>
+
+			</div>
 		</div>
 	</body>
 </html>
