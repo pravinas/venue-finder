@@ -29,6 +29,11 @@
   margin-right: 25px;
 }
 
+
+#profile-img {
+  width: 600px;
+}
+
 .contact-button {
   width:100px;
   height:100px;
