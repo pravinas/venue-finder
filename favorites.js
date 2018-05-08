@@ -1,7 +1,7 @@
-var venueInfo = [["Aeronaut Brewery", "Aeronaut Brewery was established in Somerville back in 1930. It has musical events almost on a daily basis, and has a great reputation."],
-					 ["Cafe 1863", "Cafe 1863 specializes in serving delicious pizza, sandwiches, salads and frozen yogurts. We are open in Cambridge, MA."]];
-var musicianInfo = [["Amy Who", "Amy Who is a singer, song writer, and a pianist of over 8 years. Her past experiences include performing live at Aeronaut and Cafe Andala."],
-				  ["Taylor What", "Taylor What is a country musician from Western Massachusetts. She has played at venues such as Cafe 1863 and The Middle East."]];
+var venueInfo = [["Brighton Music Hall", "Compact, standing-room-only venue featuring performances by alternative, indie & local bands"],
+					 ["Hard Rock Cafe Boston", "Rock 'n' roll-themed chain with a high-energy vibe serving burgers and American classics"]];
+var musicianInfo = [["Joey Campbell", "Alternative. Hip Hop, Punk. You name it, he'll sing it. And Well!!!"],
+				  ["Ben Bitdiddle", "10 years of piano experience. Don't regret a single moment."]];
 var venuesHeaderText = "Your Favorite Venues";
 var musiciansHeaderText = "Your Favorite Musicians";
 
