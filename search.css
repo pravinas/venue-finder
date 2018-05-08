@@ -118,20 +118,6 @@
 	margin: 32px auto;
 }
 
-.result-image {
-	display: block;
-	width: 564px;
-	height: 320px;
-	background-image: var(--bgImage);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-	text-align: right;
-	font-size: 1.5em;
-	padding: 18px;
-	color: #6a645f;
-}
-
 .result-image i:hover {
 	color: black;
 }

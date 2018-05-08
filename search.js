@@ -67,7 +67,7 @@ function loadPage() {
 		},
 		step: 5
 	});
-	dom.priceFilterSlider.onmouseup = updatePriceRange;
+	dom.priceFilterSlider.noUiSlider.on('update', updatePriceRange);
 	updatePriceRange();
 	noUiSlider.create(dom.venueSizeFilterSlider, {
 		start: [0, 250],
@@ -78,7 +78,7 @@ function loadPage() {
 		},
 		step: 25
 	});
-	dom.venueSizeFilterSlider.onmouseup = updateVenueSizeRange;
+	dom.venueSizeFilterSlider.noUiSlider.on('update', updateVenueSizeRange);
 	updateVenueSizeRange();
 }
 
