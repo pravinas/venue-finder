@@ -15,6 +15,7 @@ function loadPage() {
 	dom.resultsHeader = one("#results-header");
 	dom.resultTitles = all(".result-info b");
 	dom.resultDescriptions = all(".result-info p");
+	dom.resultImages = all(".result-image");
 	dom.filterButtons = all(".filter-button");
 	dom.popupOverlay = all(".popup-overlay")[0];
 	dom.filterPopupButtons = all(".filter-popup-button");
@@ -118,6 +119,7 @@ function switchTab(tab) {
 	for (var i in dom.resultTitles) {
 		dom.resultTitles[i].innerHTML = resultsInfo[i][0];
 		dom.resultDescriptions[i].innerHTML = resultsInfo[i][1];
+		dom.resultImages[i].style.setProperty("--bgImage", "url('images/" + resultsInfo[i][0] + ".png')");
 	}
 }
 

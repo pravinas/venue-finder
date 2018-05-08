@@ -106,6 +106,7 @@
 	-webkit-box-shadow: none;
 	font-size: 24px;
 	margin-left: 5px;
+	width: 90%;
 }
 
 #results {
@@ -121,7 +122,10 @@
 	display: block;
 	width: 564px;
 	height: 320px;
-	background: #fceee4;
+	background-image: var(--bgImage);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	text-align: right;
 	font-size: 1.5em;
 	padding: 18px;
@@ -229,7 +233,10 @@ h3 {
 	text-align: left;
 	min-width: 32%;
 	max-width: 60%;
-	margin: auto;
+	margin: 5px auto;
+	height: 32px;
+	vertical-align: middle;
+	line-height: 20px;
 }
 
 .checkbox-option input {
@@ -243,4 +250,9 @@ h3 {
 
 .checkbox-option label i {
 	font-size: 16px;
+}
+
+.checkbox-option input {
+	width: 20px;
+	height: 20px;
 }
