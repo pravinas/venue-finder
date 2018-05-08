@@ -1,0 +1,40 @@
+#image {
+  text-align: center;
+}
+
+#profile-info {
+  text-align: center;
+}
+
+#bio {
+	margin: -16px 100px 0;
+	width: 600px;
+}
+
+
+#social-buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#spotify {
+	width:100px;
+  height:100px;
+  margin-left: 25px;
+}
+
+#youtube {
+  width:100px;
+  height:100px;
+  margin-right: 25px;
+}
+
+#youtube-img {
+  height: 100px;
+  width: 100px;
+}
+
+#spotify-img {
+  height: 100px;
+  width: 100px;
+}
