@@ -3,11 +3,11 @@
 	<head>
 		<title>Favorites - Venue Finder</title>
 		<link rel="stylesheet" href="main.css">
-		<link rel="stylesheet" href="favorites.css">
+		<link rel="stylesheet" href="search.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 		<link href="nouislider.min.css" rel="stylesheet">
 		<script src="main.js"></script>
-		<script src="search.js"></script>
+		<script src="favorites.js"></script>
 		<script src="nouislider.min.js"></script>
 	</head>
 
@@ -21,21 +21,10 @@
 				<span id="venues-hider" class="hider"></span>
 				<span id="musicians-hider" class="hider"></span>
 			</div>
-			<div id="search-area">
-				<span id="search-bar">
-					<i class="fas fa-search"></i>
-					<input id="search-bar-input" placeholder="Try &quot;Cambridge&quot;" />
-				</span>
-				<button id="price-filter" class="filter-button">Price</button>
-				<button id="music-type-filter" class="filter-button">Music Type</button>
-				<button id="size-filter" class="filter-button">Size</button>
-				<button id="rating-filter" class="filter-button">Rating</button>
-			</div>
 			<div id="results">
 				<h2 id="results-header"></h2>
 				<div class="result">
 					<span class="result-image">
-						<i class="fas fa-heart"></i>
 					</span>
 					<div class="result-info">
 						<h3>
@@ -53,7 +42,6 @@
 				</div>
 				<div class="result">
 					<span class="result-image">
-						<i class="fas fa-heart"></i>
 					</span>
 					<div class="result-info">
 						<h3>
@@ -77,10 +65,10 @@
 
     <ul id="navbar">
 			<li><a href="search.html"><i class="fas fa-search"></i></a></li>
-			<li><i class="far fa-heart"></i></li>
+			<li class="selected"><i class="far fa-heart"></i></li>
 			<li><a href="index.html"><i class="fas fa-home"></i></a></li>
-			<li class="selected"><i class="far fa-comment-alt"></i></li>
-			<li><i class="far fa-user-circle"></i></li>
+			<li><a href="messages.html"><i class="far fa-comment-alt"></i></a></li>
+			<li><a href="profile.html"><i class="far fa-user-circle"></i></a></li>
 		</ul>
 	</body>
 </html>
